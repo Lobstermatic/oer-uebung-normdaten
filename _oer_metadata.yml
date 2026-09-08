@@ -26,8 +26,8 @@ keywords:
   - GND
 
 # Technische Metadaten
-site-url: &site https://github.com/nfdi4objects/oer-uebung-normdaten
-repo-url: &repo https://nfdi4objects.github.io/oer-uebung-normdaten/
+site-url: &site https://nfdi4objects.github.io/oer-uebung-normdaten/
+repo-url: &repo https://github.com/nfdi4objects/oer-uebung-normdaten
 doi: XXXXXXX.XXXXXXX
 
 # Vorgaben für den Appendix "Zitat"
@@ -53,7 +53,7 @@ materialart: https://w3id.org/kim/hcrt/drill_and_practice
 status: Draft  # Draft, Incomplete, Published
 
 # Schema für eigene Key-Value-Paare mit Bindestrich: custom-key: "custom-value"
-beispiel-key: beispiel-value
+# beispiel-key: beispiel-value
 # Shortcuts für Verweise auf verlinkte OER-Bausteine für die Nutzung im Text. Beispiel:
 # url_n4o-oer_metadaten: https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-skript-einfuehrung-metadaten'
 # Referenz  im Text: {{< meta url_n4o-oer_metadaten >}}

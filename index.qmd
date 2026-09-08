@@ -1,0 +1,230 @@
+---
+title: "Übung zur Recherche von Normdaten im GND-Explorer"
+subtitle: "Was sind Normdaten und wie recherchiere ich Normdaten zu Informationen aus archäologischen Kontexten im GND-Explorer?"
+lang: de
+date: today
+date-format: "DD.MM.YYYY"
+date-modified: last-modified
+metadata-files:
+  - _layout.yml
+  - _autor_innen.yml
+  - _oer_metadata.yml
+# Optional
+bibliography: bibliographie.bib
+toc: true
+toc-expand: true
+toc-title: |
+  ![](img/n4o_oer_hsm_titelgraphik.png)
+toc-location: right
+number-sections: true # Auf false setzen, wenn keine automatische Abschnittsnummerierung gewünscht
+lightbox: true
+crossref: 
+  lof-title: "Liste der Abbildungen"
+# Für CI-build in github
+execute:
+  freeze: auto
+---
+
+## Praktische Bezüge
+
+Normdaten sorgen dafür, dass Personen, Orte, Institutionen oder Begriffe eindeutig identifiziert werden können.
+
+![Welches Frankfurt ist gemeint?
+*Illustrative Grafik zusammengestellt von Sandra Schröer-Spang unter Verwendung der NFDI4Objects Icons.*](img/Grafik_Normdaten_Orte.png){fig-alt="Person von Hinten, die vor einem Buch sitzt, in dem das Wort \"Frankfurt\" zu lesen ist. Unter dem Wort Frankfurt befindet sich eine Abbildung von Ruinen. Über der Person und dem Bild ist eine Denkblase mit einem großen Fragezeichen." width="250"}
+
+**Warum ist das wichtig?**
+
+Stellen Sie sich vor, Sie recherchieren einen Datenbestand, der laut Metadaten aus Frankfurt stammt. Welches Frankfurt ist gemeint? Frankfurt am Main? Frankfurt an der Oder? **Ohne weitere Informationen können nicht eindeutige Begriffe die Nutzenden verwirren und machen den Datensatz im schlimmsten Fall unbrauchbar**, da er seinen Kontext verliert.
+
+Dies gilt ebenso für **gleichlautende** oder **alternative Personennamen** oder **Institutionen, die beispielsweise ihren Namen ändern**, sodass alle Metadaten, die den alten Namen nennen, eventuell nicht mehr verstanden werden.
+
+Normdaten helfen dabei, Personen, Institutionen und Ortsangaben sowohl für Menschen als auch für Maschinen eindeutig zu **identifizieren**.
+
+![Eduard Paulus der jüngere (li., 1837-1907) und sein Vater (Konrad) Eduard Paulus (re. 1803-1878) waren beide archäologisch aktiv und publizierten unter dem Namen Eduard Paulus. Normdaten helfen bei der eindeutligen Zuordnung.
+*Grafik zusammengestellt von Sandra Schröer-Spang. Bild links: [Gottlob Fischer](https://explore.gnd.network/gnd/1258763826), [Wikimedia](https://commons.wikimedia.org/w/index.php?curid=145082728), Gemeinfrei; Bild rechts: unbekannt, [Wikimedia](https://commons.wikimedia.org/w/index.php?curid=2295125), Gemeinfrei*](img/Eduard_Paulus.png){fig-align="center"}
+
+**Was sind Normdaten?**
+
+Normdaten sind normierte Bezeichnungen für Personen, Orte, Institutionen und Begriffe. Jede Entität enthält dabei einen **persistenten Identifikator (PIDs)** sowie beschreibende Zusatzinformationen wie Lebensdaten, Namensvarianten und andere Informationen, die eine eindeutige Zuweisung ermöglichen. Über den PID sind Namen, Orte, Institutionen und Begriffe eindeutig zuweisbar und darüber hinaus die unter dem Normdateneintrag erfassten Daten austauschbar [@Busch/Müller2023]. Eine Übung zu PIDs finden Sie [unter diesem Link]({{< meta uebung-pid-url >}}).
+
+**Wo finde ich Normdaten**
+
+::: {style="float: right; margin: 5px;"}
+
+![](img/materialien_GNDlogoOhneSchrift_png.png){fig-alt="GND-Logo" width="200"}
+
+:::
+
+Der bekannteste Normdatendienst in Deutschland ist die **Gemeinsame Normdatei (GND)** der Deutschen Nationalbibliothek. Der Dienst umfasst Personen, Körperschaften, Konferenzen, Geografika, Sachbegriffe und Werke, die in Bezug zu kulturellen und wissenschaftlichen Sammlungen stehen. Die GND dient hauptsächlich der Erschließung von Bibliotheksbeständen, wird jedoch auch in anderen Kontexten als Normdatendienst verwendet. Die Normdaten sind über den [GND-Explorer](https://explore.gnd.network/) recherchierbar.
+
+Für Normdaten zu Ortsnamen werden darüber hinaus häufig Gazetteer-Dienste genutzt. Gazetters sind Ortsverzeichnisse, meist angereichert mit Koordinaten, alternativen Bezeichnungen und anderen Zusatzinformationen, die den Ort beschreiben. Gazeteers oder Ortsverzeichnisse werden daher auch als Normdaten für Ortsdaten verwendet. Bekannte Gazetteers bzw. Ortsverzeichnisse sind [**Geonames**](https://www.geonames.org/) sowie speziell für Orte der archäologischen Forschung [**iDAI.gazetter**](https://gazetteer.dainst.org/app/#!/home) und [**Pleiades**](https://pleiades.stoa.org/).
+
+**Im Fokus dieser Übung steht die GND als Normdatendienst.**
+
+Mehr zu Normdaten und Normdatendiensten finden Sie beispielsweise bei den [IANUS-Empfehlungen zur Langzeitarchivierung](https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/kontrollierte-vokabulare-thesauri-und-normdaten/) und bei [@Busch/Müller2023]
+
+### Voraussetzungen {.kolophon .unnumbered .unlisted}
+
+Für das erfolgreiche Absolvieren dieser Übung sollten die Teilnehmenden über einen Internetzugang verfügen, da in der Übung auf externe Webpages verlinkt wird.
+
+Kenntnisse des Kapitels ["Kontrollierte Vokabulare, Thesauri und Normdaten" der IANUS Empfehlungen zur Langzeitarchivierung für die NFDI4Objects-Community](https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/kontrollierte-vokabulare-thesauri-und-normdaten) sind von Vorteil.
+
+## Aufgabenstellungen
+
+Die Bedeutung von Normdaten zeigt sich besonders dort, wo sie **fehlen**. Vor allem in älteren Publikationen begegnen uns häufig uneinheitliche oder variierende Bezeichnungen von Personen, Orten, Institutionen und Objekten. Dadurch wird eine eindeutige Identifikation erschwert.
+
+In den folgenden Aufgaben lernen Sie am Beispiel eines Auszugs aus [@Bach1893] ausgewählte Normdatendienste und Gazetteers kennen und üben deren praktische Verwendung zur Anreicherung von Daten aus archäologischen Kontexten.
+
+Bei dem Textbeispiel handelt es sich um eine Fundchronik der Jahre 1888 bis 1892. Im Unterkapitel Metallzeiten ist unter der Nummer 5 ein ausführlicherer Eintrag zu finden.
+
+::: {#fig-fbs1893 layout-ncol="2"}
+![[Seite 10](https://doi.org/10.11588/diglit.27197#0010)](img/fundberichte_schwaben1893_0010.jpg){#fig-fbs1893_0010}
+
+![[Seite 11](https://doi.org/10.11588/diglit.27197#0011)](img/fundberichte_schwaben1893_0011.jpg){#fig-fbs1893_0011}
+
+Auszug aus [@Bach1893].
+:::
+
+**Transkript**
+
+> 5)  **Neuenhaus OA. Nürtingen.** Von den dort stehenden Grabhügeln soll einer schon vor ca. 30 Jahren ausgegraben worden sein und 3 goldene Ringe enthalten haben. Die von **Prof. Dr. K. Miller** im Jahr 1888 ausgegrabenen 2 weiteren Hügel beanspruchten eine 2 tägige Arbeit mit 8 Arbeitern, ergaben aber keine reiche Ausbeute. Der eine Hügel von 16 m Durchmesser und 2 m Höhe enthielt einen 1 m breiten Steinkranz aus Liaskalksteinen verschiedener Grösse. Bei V. in fand sich ein Gürtelblech aus Bronze von 39 cm Länge und 15 cm Breite (jetzt in der **Staatssamml. vaterl. Altert.**). Der andere Hügel von 12 m Durchmesser und 1 ’/2 m Höhe, der aus weissem Keupersandstein aufgeführt ist, wird als ein megalithisches Denkmal erklärt. Derselbe besteht aus 28 Steinen von 60—95 cm Länge, 30—60 cm Breite und 15—20 cm Dicke. Die Steinplatten sind alle aufrecht gestellt und stehen in dem blauen Häfnerletten; ein Deckelstein mit einer Schale scheint oben gelegen zu haben. St. A. 1889 Nr. 9.
+
+### Aufgabe 1
+
+::: panel-tabset
+#### Aufgabenstellung
+
+Recherchieren Sie, mithilfe des [GND-Explorers](https://explore.gnd.network/) den **Ausgräber der Fundstelle** und ermitteln Sie die **GND-Nummer**.
+
+Schauen Sie sich den GND-Eintrag an und notieren Sie die Daten, die im Eintrag zu der Person erfasst sind.
+
+![Ausschnitt aus @Bach1893, 10.](img/fundberichte_schwaben1893_0010_Miller.jpg){fig-alt="Ausschnitt aus Fundberischte aus Schwaben 1, 1893 Seite 10 mit Hervorhebung des Namens des Ausgräbers 'Prof. Dr. K. Miller'."}
+
+#### Lösung
+
+Im Text ist als Ausgräber K. Miller angegeben. Dabei handelt es sich um **Konrad Miller (1844-1933)**. Die GND-Nummer lautet [117043486](https://explore.gnd.network/gnd/117043486)
+
+Im Normdatensatz enthaltene Daten: 
+* Name 
+* Akademischer Grad 
+* Geschlecht 
+* Beruf(e) 
+* Lebensdaten 
+* Land 
+* Geburts- und Sterbeort  
+* Affiliation 
+* Publikationen 
+* GND-Nummer und weitere Identifikatoren
+
+#### Lösungsweg
+
+Ein möglicher Lösungsweg ist die Eingabe von "Miller Archäologe" im GND-Explorer. Auch die Eingabe von "Miller, K" führt zum Ergebnis, hierfür muss jedoch die Trefferliste länger durchsucht werden.
+
+![](img/GND_Miller_Bildschirmfoto%20vom%202026-09-08%2014-49-16.png){fig-alt="Bildschirmaufnahme der Trefferliste zu 'Miller Archäologe' im GND-Explorer."}
+:::
+
+### Aufgabe 2
+
+::: panel-tabset
+#### Aufgabenstellung
+
+Recherchieren Sie, mithilfe des [GND-Explorers](https://explore.gnd.network/) die **Institution** in der das Gürtelblech aus Bronze aufbewahrt wird. Ermitteln Sie die **GND-Nummer** der genannten Institution. Wie heißt sie heute und welche GND-Nummer hat der Eintrag der heutigen Institution?
+
+![Ausschnitt aus @Bach1893, 10.](img/fundberichte_schwaben1893_0010_Staatssamml.jpg){fig-alt="Ausschnitt aus Fundberischte aus Schwaben 1, 1893 Seite 10 mit Hervorhebung der Insitution 'Staatssaml. vaterl. alt.'."}
+
+#### Lösung
+
+Der damalige Name der Institution lautet **Königliche Staatssammlung vaterländischer Altertümer** und hat die GND-Nr. [5308567-X](https://explore.gnd.network/gnd/5308567-X).
+
+1947 wurde die Institution in **"Württembergsisches Landesmuseum Stuttgart"** umbenannt und seit 2006 heisst die Einrichtung **"Landesmuseum Württemberg"**, dem die GND-Nummer [10148439-2](https://explore.gnd.network/gnd/10148439-2) zugeordnet ist.
+
+#### Lösungsweg
+ Gibt man die im Text genannte Abkürzung "Staatssamml. vaterl. Altert." im GND-Explorer ein, erscheint in der Vorschlagliste bereits die gesuchte Institution. Alternativ lässt sich die Abkürzung durch eine Internetrecherche auflösen und der Institutionenname so im GND-Explorer suchen.
+
+![](img/GND_Staatssammlung_Bildschirmfoto%20vom%202026-09-08%2014-53-35.png){fig-alt="Bildschirmaufnahme der Trefferliste zu der im Text genannten Abkürzung im GND-Explorer."}
+
+Im GND-Eintrag der Institution sind auch Vorgänger und Nachfolger erfasst. So lässt sich der heutige Name samt GND-Nummer nachvollziehen.
+
+![](img/GND_Detail_K%C3%B6nigliche%20Staatssammlung_Bildschirmfoto%20vom%202026-09-08%2015-34-23.png){fig-alt="Bildschirmfoto des GND-Eintrags der Königlichen Staatssammlung vaterländischer Altertümer, in dem Vorgänger und Nachfolger erfasst sind."}
+:::
+
+### Aufgabe 3
+
+:::: panel-tabset
+#### Aufgabenstellung
+
+Recherchieren Sie, mithilfe des [GND-Explorers](https://explore.gnd.network/) den Ort der Fundstelle mit zugehöriger GND-Nummer. Wie heißt der Ort heute?
+
+![Ausschnitt aus @Bach1893, 10.](img/fundberichte_schwaben1893_0010_Neuenhaus.jpg){fig-alt="Ausschnitt aus Fundberischte aus Schwaben 1, 1893 Seite 10 mit Hervorhebung des Ortes 'Neuenhaus'."}
+
+#### Lösung
+
+Bei dem Ort handelt es sich um das heutige **Aichtal-Neuenhaus** mit der GND-Nummer [4797486-2](https://explore.gnd.network/gnd/4797486-2).
+
+#### Lösungsweg
+
+Gibt man den im Text genannten Ort "Neuenhaus" im GND-Explorer ein, erscheinen mehrere Orte. Mit dem Wissen, dass es sich um einen Ort in Baden-Württemberg handeln muss, bleiben zwei GND-Einträge: "Aichtal-Neuenhaus" und "Neuenhaus (Nürtingen)". Um den richtigen Eintrag zu finden, müssen beide überprüft werden.
+
+::: callout-warning
+#### Vorsicht vor fehlerhaften Einträgen und Doubletten
+
+Das ebenfalls in der Trefferliste des GND-Explorers angezeigte Neuenhaus (Nürtingen) ist nicht korrekt mit dem heutigen Ortnamen verknüpft und führt daher zu einem anderen Ortsteil von Aichtal (Aichtal Grötzingen). Solche Doubletten und fehlerhaften Einträge können in der GND vorkommen, weshalb in manchen Fällen eine parallele Internetrecherche zur Verifizierung zu empfehlen ist.
+:::
+
+![](img/GND_Neuenhaus_Bildschirmfoto%20vom%202026-09-08%2014-50-58.png){fig-alt="Bildschirmaufnahme der Trefferliste zu dem im Text genannten Ort 'Neuenhaus' im GND-Explorer."}
+
+::::
+
+### Aufgabe 4 - Transferaufgabe: Auswahl geeigneter Normdatendienste
+
+Neben der GND gibt es noch weitere Normdatendienste.
+
+- Die [Virtual International Authority File (VIAF)](https://viaf.org/de) führt beispielsweise **Normdaten aus verschiedenen nationalen Bibliotheken** zusammen.
+- Auch [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) fungiert als **Normdatendienst für Personennamen, Orte, Institutionen und Begriffe**.
+
+Darüber hinaus gibt es auf bestimmte Entitäten spezialisierte Normdatendienste.
+
+- [Geonames](https://www.geonames.org/) ist beispielsweise ein Gazetteer-Dienst, in dem Normdaten zu Geografika recherchiert werden können.
+- Der [iDAI gazetteer](https://gazetteer.dainst.org/app/#!/home) ist ein Gazetteer und Normdatendienst, der auf ortsbezogene Daten mit archäologischem Kontext spezialisiert ist.
+- In [Iconclass](https://iconclass.org/de/_) sind **ikonographische Themen** klassifiziert
+- Der [Getty Art&Architecture Thesaurus](https://www.getty.edu/research/tools/vocabularies/aat/) enthält **Kunst- und Kulturobjekt-bezogene Normdaten**.
+
+Erkunden Sie die verschiedenen Normdatendienste und machen Sie sich mit ihnen vertraut. Recherchieren Sie dazu Beispiele wie **"Eduard Paulus"**, **"Oberstein"**, **"Tell Chuera"** sowie nach den Begriffen **"Amphore"** und **"Jupiter"**. Überlegen Sie, welche Normdatendienste Sie für die Erschließung Ihrer eigenen Projekte nutzen würden, und begründen Sie Ihre Wahl.
+
+## Tipps zum Umgang mit Normdatendiensten
+
+- **Orts- und Institutionennamen unterliegen historischen Veränderungen** (Schreibweise, Eingemeindung, Umstrukturierung, Umbenennung).
+- Ältere oder regionale Schreibweisen sind **nicht immer als Varianten im Normdatensatz hinterlegt**.
+- Normdatendienste arbeiten zum Teil mit **Vorgänger- und Nachfolgerbeziehungen**, um diese Veränderungen abzubilden.
+- Doubletten und fehlerhafte Einträge sind auch in etablierten Normdatendiensten möglich
+- Eine erfolgreiche Recherche erfordert oft **zusätzliche Kontext- oder Hintergrundkenntnisse**.
+
+## Weiterführende Quellen und Informationen {.appendix .unnumbered}
+
+Eng mit Normdaten verknüpft sind **kontrollierte Vokabulare**. Auch sie stellen sicher, dass ausgewählte Begriffe zweifelsfrei zugeordnet werden und Dinge miteinander vergleichbar sind. Kontrollierte Vokabulare beziehen sich meist auf projekt-, fach- oder anwendungsfallspezifische Begriffe.
+
+Mehr zu Normdaten und kontrollierten Vokabularen erfahren Sie z. B. bei [IANUS](https://ianus-fdz.de/it-empfehlungen/projektphasen/dokumentation/kontrollierte-vokabulare-thesauri-und-normdaten/), dem [Deutschen Museumsbund](https://www.museumsbund.de/kontrollierte-vokabulare/) auf der Seite des [MusIS-Projekts beim Bibliotheksservice-Zentrum Baden-Württemberg](https://wiki.bsz-bw.de/spaces/MUSIS/pages/4887035/Regelwerke+Thesauri+Klassifikationen+Systematiken+und+Begriffslisten) oder bei [NFDI4Culture](https://docs.nfdi4culture.de/ta2-fair-handreichung/empfehlungen-zu-metadatenstandards/empfehlungen-vokabulare-normdaten-und-anwendungsontologien) sowie bei [@Busch/Müller2023].
+
+Bei der GND und bei anderen Normdatenanbietern werden Personen, Institutionen und Orte unterschieden, indem sie in jeweils in einem eigenen Normdatensatz beschrieben sind. Für die eindeutige Ansprache enthält jeder Normdatensatz einen Persistenten Identifier (PID). Bei der GND entspricht das der GND-Nummer. Mehr zu PIDs erfahren Sie z.B. bei [forschungsdaten.info](https://forschungsdaten.info/themen/veroeffentlichen-und-archivieren/persistente-identifikatoren/) oder beim [PID Network Deutschland](https://www.pid-network.de/en/). Wir bieten außerdem eine [Übung zu PIDs als OER-Baustein](https://gitlab.rlp.net/n4o/oer-bausteine/n4o-oer-uebung-pids) von NFDI4Objects an.
+
+## Nachnutzen {.appendix .unnumbered}
+
+Alle sind herzlich eingeladen, diesen Baustein und die zugehörige Copyleft-Lizenz zu nutzen, um ihr Wissen und ihre Expertise in die Verbesserung und Aktualisierung einzubringen.
+
+Unser Wunsch ist ein lebendiges, stetig aktualisiertes Dokument, das sich durch die Beiträge vieler verändert - im Einklang mit einem sich wandelnden Umfeld. Wir freuen uns im Falle einer Überarbeitung über eine kurze Notiz – das ist aber selbstverständlich keine Pflicht.
+
+<!-- Verweise auf Website und Repository werden in _oer_metadata.yml global festgelegt. Wenn die OER nicht in einem git-Repository gehostet oder online bereitgestellt werden, können die folgenden zwei Zeilen gelöscht werden. -->
+
+:link: [Dieser Baustein als Website]({{< meta site-url >}})
+
+:link: [Quarto-Quellcode dieses Bausteins]({{< meta repo-url >}})
+
+------------------------------------------------------------------------
+
+:link: Diese Übung nutzt das [OER-Übungs-Template von NFDI4Objects]({{< meta template-repo-url >}})
+
+------------------------------------------------------------------------
+
+```{=html}
+
+```

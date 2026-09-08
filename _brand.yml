@@ -1,13 +1,13 @@
 logo:
   images:
     icon-logo:
-      path: assets/logos/n4o_logo_verlauf_200px.png
+      path: assets/logos/logo_klein.png
       alt: "Icon"
     institution-logo:
-      path: assets/logos/n4o_logo_verlauf_claim_kurz_h200px.png
+      path: assets/logos/logo.png
       alt: "Logo der Institution"
     projekt-logo:
-      path: assets/logos/n4o_logo_oer_hsm.png
+      path: assets/logos/logo_gross.png
       alt: "Logo des Projekts"
   small: icon-logo
   medium: institution-logo
@@ -67,7 +67,7 @@ typography:
     line-height: 1.4
   headings:
     family: PT Sans
-    weight: 400
+    weight: 500
     style: normal
     line-height: 1.5
     color: text
@@ -109,14 +109,11 @@ defaults:
       code-block-border-width: 2px
       code-block-border-color: $brand-akzent
       code-block-border-radius: 4px
-      code-block-font-size: 0.85rem
-      code-inline-font-size: 0.85rem
       btn-code-copy-color: $brand-akzent
       btn-code-copy-color-active: $brand-akzent
   # Inline-Code
       code-bg: $brand-flaeche
       code-color: $brand-text
-      code-font-size: 0.85rem
   # Table of Contents
       toc-font-size: 0.9rem
       toc-color: $brand-text
@@ -127,18 +124,18 @@ defaults:
       callout-border-width: 2px
       callout-border-radius: 4px
       callout-border-scale: 0%
-      callout-icon-scale: 10%
+      callout-icon-scale: 100%
       callout-margin-top: 1.25rem
       callout-margin-bottom: 1.25rem
-      callout-color-note: $brand-akzent
-      callout-color-tip: $brand-akzent
-      callout-color-caution: $brand-akzent
-      callout-color-warning: $brand-akzent
-      callout-color-important: $brand-akzent
+      callout-color-note: $brand-cd-farbe
+      callout-color-tip: $brand-hinweis
+      callout-color-caution: $brand-warnung
+      callout-color-warning: $brand-warnung
+      callout-color-important: $brand-fehler
   # Tabset
       nav-link-padding-y: .5rem
       nav-link-padding-x: 1rem
-      nav-link-font-size: 1.2rem
+      nav-link-font-size: 1.1rem
       nav-link-font-weight: 400
       nav-link-color: $brand-text
       nav-tabs-border-color: $brand-akzent
